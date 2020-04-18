@@ -15,6 +15,21 @@ ol, ul {
     list-style: none;
 }
 
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(150px, 1fr));
+}
+
+@media only screen and(max-width: 600px){
+    ul{
+        height: auto;
+
+    }
+    nav{
+        height: auto;
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -24,12 +39,10 @@ a {
     padding: 0;
     margin: 0;
     width: 80px;
-    position: relative;
 }
 
 #logo img {
     width: 100%;
-    margin: 0;
 }
 
 p {
@@ -46,17 +59,8 @@ header {
     flex-direction: column;
     text-align: center;
     height: 60px;
+    width: 90%;
 }
-
-@media only screen and(max-width: 600px){
-    #top-header{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        font-size: 14px;
-    }
-}
-
 
 .container {
     margin: 0 auto;
@@ -66,14 +70,14 @@ header {
 
 #menu {
     float: right;
-    width: 70%;
+    width: inherit;
     height: 100%;
     margin: 0;
 }
 
 #menu ul {
     text-align: center;
-    float: right;
+    /* float: right; */
     margin: 0;
     background-color: #0074D9;
 }
@@ -82,6 +86,7 @@ header {
     display: inline-block;
     padding: 0;
     margin: 0;
+    width: inherit;
 }
 
 #menu li a, menu li span {
@@ -91,10 +96,16 @@ header {
     text-transform: uppercase;
     line-height: 60px;
     letter-spacing: 1px;
+    width: inherit;
 }
 
-#menu li a {
+#menu li a {я
     color: #FFF;
+    width: auto;
+}
+
+#menu li a:hover{
+    color: #0074D9;
 }
 
 #menu li:hover {
@@ -102,74 +113,73 @@ header {
     color: #0074D9;
     border-left: 1px solid #0074D9;
 }
-#menu a:hover{
-    color: #0074D9;
-}
 
-#header-image-menu{
-    top:10px;
+
+
+#header-image-menu {
+    margin-top: 10px;
+    padding: 0px;
+    width: 100%;
     position: relative;
 }
 
-#header-image-menu img{
-    width: 100%;
-    margin: 0;
+#header-image-menu img {
+    width: inherit;
     padding: 0;
+    margin-top: 100px;
+    height: auto;
+    
 }
 
-#image-text{
+#image-text {
     position: absolute;
     top: 60%;
     left: 60%;
-    transform: translate(-30%,-30%);
+    transform: translate(-30%, -30%);
     text-align: center;
 }
 
-#welcome{
+#welcome {
     display: grid;
-    
     overflow: hidden;
     margin: 0 auto;
 }
 
-#welcome .title{
+#welcome .title {
     margin-top: 20px;
     padding: 20px;
     text-align: center;
 }
 
-#welcome p{
+#welcome p {
     margin-bottom: 40px;
     text-align: center;
 }
 
-#section-2{
+#section-2 {
     overflow: hidden;
     margin-top: 5em;
     padding-top: 1em;
-    border-top: 1px solid rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-.row{
+.row {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-
 }
 
-.row #column1,
-.row #column2,
-.row #column3{
+.row #column1, .row #column2, .row #column3 {
     padding: 80px 40px 80px 40px;
 }
 
-.column-title h2{
+.column-title h2 {
     margin: 1em 0;
     font-size: 1.6em;
     font-weight: 700;
 }
 
-.button{
+.button {
     text-decoration: none;
     text-align: center;
     display: inline-block;
@@ -179,12 +189,13 @@ header {
     border: 2px solid #4CAF50;
     padding: 16px 32px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.button:hover{
+.button:hover {
     background-color: #FFFFFF;
     color: #4CAF50;
 }
